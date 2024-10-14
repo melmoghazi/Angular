@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\sourcecontrol\\mygithub\\_Angular17\\Product\\DemoProductAPI\\DemoProductAPI\\DemoProductAPI.csproj": {}
+    "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\DemoProductAPI.csproj": {}
   },
   "projects": {
-    "E:\\sourcecontrol\\mygithub\\_Angular17\\Product\\DemoProductAPI\\DemoProductAPI\\DemoProductAPI.csproj": {
+    "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\DemoProductAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\sourcecontrol\\mygithub\\_Angular17\\Product\\DemoProductAPI\\DemoProductAPI\\DemoProductAPI.csproj",
+        "projectUniqueName": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\DemoProductAPI.csproj",
         "projectName": "DemoProductAPI",
-        "projectPath": "E:\\sourcecontrol\\mygithub\\_Angular17\\Product\\DemoProductAPI\\DemoProductAPI\\DemoProductAPI.csproj",
+        "projectPath": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\DemoProductAPI.csproj",
         "packagesPath": "C:\\Users\\Mohammed\\.nuget\\packages\\",
-        "outputPath": "E:\\sourcecontrol\\mygithub\\_Angular17\\Product\\DemoProductAPI\\DemoProductAPI\\obj\\",
+        "outputPath": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mohammed\\AppData\\Roaming\\NuGet\\NuGet.Config",
