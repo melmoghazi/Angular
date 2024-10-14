@@ -3,3 +3,9 @@
     <a routerLink="/account/login" >Login</a> |
     <a routerLink="/account/register" >Register</a>
 </div>
+
+<div>
+    @for (prod of productsList; track $index) {
+        <p>{{prod.name}}</p>
+    }
+</div>

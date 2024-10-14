@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './account/login/login.component';
 import { RegisterComponent } from './account/register/register.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
 
 export const routes: Routes = [
     {
@@ -33,6 +34,10 @@ export const routes: Routes = [
                 pathMatch: 'full'
             }
         ]
+    },
+    {
+        path: 'products',
+        component: ProductListComponent
     },
     {
         path: '**',
