@@ -1,0 +1,25 @@
+<h1>ngIf syntax</h1>
+<div *ngIf="categoryList[0].name; else noCategoryAvailable">
+    {{categoryList[0].name}}
+</div>
+
+<h1>ngIf syntax and elvis operator</h1>
+
+<div *ngIf="categoryList[11]?.name; else noCategoryAvailable">
+    {{categoryList[11].name}}
+</div>
+
+<h1>angular 17 ngIf and else syntax</h1>
+@if(categoryList[0].id ===1){
+<p>{{categoryList[0].name}}</p>
+}
+@else{
+<p>No category available!</p>
+}
+
+
+
+
+<ng-template #noCategoryAvailable>
+    <p>No category available!</p>
+</ng-template>
