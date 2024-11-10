@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2448A502-69EB-402D-847B-0C622F7C58BF}|DemoProductAPI\\DemoProductAPI.csproj|e:\\sourcecontrol\\mygithub\\angular\\demoproductapi\\demoproductapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2448A502-69EB-402D-847B-0C622F7C58BF}|DemoProductAPI\\DemoProductAPI.csproj|solutionrelative:demoproductapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2448A502-69EB-402D-847B-0C622F7C58BF}|DemoProductAPI\\DemoProductAPI.csproj|e:\\sourcecontrol\\mygithub\\angular\\demoproductapi\\demoproductapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2448A502-69EB-402D-847B-0C622F7C58BF}|DemoProductAPI\\DemoProductAPI.csproj|solutionrelative:demoproductapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2448A502-69EB-402D-847B-0C622F7C58BF}|DemoProductAPI\\DemoProductAPI.csproj|e:\\sourcecontrol\\mygithub\\angular\\demoproductapi\\demoproductapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2448A502-69EB-402D-847B-0C622F7C58BF}|DemoProductAPI\\DemoProductAPI.csproj|solutionrelative:demoproductapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2448A502-69EB-402D-847B-0C622F7C58BF}|DemoProductAPI\\DemoProductAPI.csproj|e:\\sourcecontrol\\mygithub\\angular\\demoproductapi\\demoproductapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2448A502-69EB-402D-847B-0C622F7C58BF}|DemoProductAPI\\DemoProductAPI.csproj|solutionrelative:demoproductapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2448A502-69EB-402D-847B-0C622F7C58BF}|DemoProductAPI\\DemoProductAPI.csproj|e:\\sourcecontrol\\mygithub\\angular\\demoproductapi\\demoproductapi\\repositories\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Category.cs",
               "DocumentMoniker": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\Models\\Category.cs",
               "RelativeDocumentMoniker": "DemoProductAPI\\Models\\Category.cs",
@@ -51,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\Program.cs",
               "RelativeDocumentMoniker": "DemoProductAPI\\Program.cs",
@@ -64,13 +64,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "DemoProductAPI\\Controllers\\CategoriesController.cs",
               "ToolTip": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\Controllers\\CategoriesController.cs",
               "RelativeToolTip": "DemoProductAPI\\Controllers\\CategoriesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAsAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAkwBIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T08:23:51.965Z",
               "EditorCaption": ""
@@ -90,12 +90,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\appsettings.json",
               "RelativeDocumentMoniker": "DemoProductAPI\\appsettings.json",
-              "ToolTip": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\appsettings.json*",
-              "RelativeToolTip": "DemoProductAPI\\appsettings.json*",
+              "ToolTip": "E:\\sourcecontrol\\mygithub\\Angular\\DemoProductAPI\\DemoProductAPI\\appsettings.json",
+              "RelativeToolTip": "DemoProductAPI\\appsettings.json",
               "ViewState": "AQIAAAIAAAAAAAAAAAAkwAkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-10-14T07:05:46.124Z",

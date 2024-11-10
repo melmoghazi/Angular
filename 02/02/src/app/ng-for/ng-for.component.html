@@ -1,0 +1,20 @@
+<h1>angular ngFor syntax</h1>
+<table class="table table-border">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of categoryList">
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+        </tr>
+    </tbody>
+</table>
+<h1>angular 17 for syntax</h1>
+
+<ul>
+    @for (cat of categoryList; track cat.id) {
+    <li>{{ cat.name }}</li>
+    }
+</ul>
