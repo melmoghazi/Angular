@@ -1,11 +1,11 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ng-class',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass,NgStyle],
   templateUrl: './ng-class.component.html',
   styleUrl: './ng-class.component.scss'
 })

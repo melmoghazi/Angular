@@ -1,0 +1,54 @@
+<h1>LowerCasePipe, UpperCasePipe, DatePipe,
+    DecimalPipe, CurrencyPipe, PercentPipe,
+    SlicePipe,JsonPipe</h1>
+<hr>
+Amount = {{amount |percent}}
+<table class="table table-border">
+    <thead>
+        <th>Name</th>
+        <th>Slice</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Json</th>
+
+    </thead>
+    <tbody>
+        @for(p of productsList; track p.id){
+        <tr>
+            <td> {{p.name | uppercase}}</td>
+            <td> {{p.name | slice:0:3}}</td>
+            <td> {{p.description | lowercase}}</td>
+            <td>{{p.price | number:'3.1-3'}}</td>
+            <td> {{p.dateAdded | date:'MMM/dd/yyyy'}}</td>
+            <td>{{p.price | currency:'EGP':'symbol-narrow'}}</td>
+            <td>{{p | json}}</td>
+        </tr>
+        }
+    </tbody>
+</table>
+<hr>
+<table class="table table-border">
+    <thead>
+        <th>Name</th>
+        <th>Slice</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Date</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        @for(p of productsList | slice:0:3; track p.id){
+        <tr>
+            <td> {{p.name | uppercase}}</td>
+            <td> {{p.name | slice:0-7}}</td>
+            <td> {{p.description | lowercase}}</td>
+            <td>{{p.price | number:'3.1-3'}}</td>
+            <td> {{p.dateAdded | date:'MMM/dd/yyyy'}}</td>
+            <td>{{p.price | currency:'EGP':'symbol-narrow'}}</td>
+
+        </tr>
+        }
+    </tbody>
+</table>
