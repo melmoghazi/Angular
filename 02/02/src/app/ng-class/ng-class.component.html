@@ -1,0 +1,29 @@
+<div>
+    @for(p of productsList; track p.id){
+    <div [ngClass]="{'siennasienna':p.price <=30, 'yellowyellow':p.price==40, 'goldgold':p.price >=50}">
+        <h6>{{p.name}}
+            {{p.description}}
+        </h6>
+    </div>
+    }
+</div>
+<hr>
+<div>
+    @for(p of productsList; track p.id){
+    <div [ngClass]="{'siennasienna':p.price==30, 'goldgold':p.price >=50}">
+        <h6>{{p.name}}
+            {{p.description}}
+        </h6>
+    </div>
+    }
+</div>
+<hr>
+<div>
+    @for(p of productsList; track p.id){
+    <div [ngClass]="p.price<=30 ? 'siennasienna':'goldgold'">
+        <h6>{{p.name}}
+            {{p.description}}
+        </h6>
+    </div>
+    }
+</div>
