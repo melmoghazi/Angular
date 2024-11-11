@@ -1,0 +1,123 @@
+<h1>OnChanges lifecycle hook</h1>
+<p>One of the key features of Angular is its use of lifecycle hooks, which allow developers to tap into different stages
+    of a component’s lifecycle
+    and perform specific actions at each stage. One of the most useful of these hooks is the OnChanges lifecycle hook,
+    which is called whenever
+    a bound input property of a component changes.
+    The OnChanges lifecycle hook is a method that is defined on a component class and decorated with the &#64;OnChanges
+    decorator.
+    This method takes a single parameter, an object that contains information about the changes that have occurred to
+    the input properties of the component.
+    The object is of type SimpleChanges, which has a property for each input property of the component, and each
+    property contains the current
+    and previous values of the input property.
+    The OnChanges lifecycle hook is called after the first ngOnInit lifecycle hook and before the ngDoCheck and
+    ngAfterContentChecked hooks.
+    It’s also called whenever an input property of the component changes. This makes it a useful tool for performing
+    actions in response to changes to
+    input properties, such as updating the component’s internal state or triggering an API call.</p>
+
+<h1>OnInit lifecycle hook</h1>
+<p>A callback method that is invoked immediately after the default change detector has checked the directive's
+    data-bound properties for the first time, and before any of the view or content children have been checked. It is
+    invoked only once when the directive is instantiated.</p>
+<hr>
+
+<h1>ngDoCheck</h1>
+<p>call 2 times
+    1- one time after ngOnInit.
+    2- every time after ngOnChanges called.
+</p>
+
+<hr>
+<h1>ngAfterContentInit</h1>
+<p>called one time only one time not every time after the first ngDoCheck</p>
+
+<hr>
+<h1>ngAfterContentChecked</h1>
+<p>
+    1 - called one after ngAfterContentInit
+    2- called every time after ngDoCheck
+</p>
+
+<hr>
+<h1>Component lifecycle hook</h1>
+<table class="table table-border">
+    <thead>
+        <tr>
+            <th> Phase </th>
+            <th> Method </th>
+            <th> Summary </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Creation</td>
+            <td>constructor </td>
+            <td>Standard JavaScript class constructor . Runs when Angular instantiates the component.</td>
+        </tr>
+        <tr>
+            <td>Change Detection</td>
+            <td>ngOnInit</td>
+            <td>Runs once after Angular has initialized all the component's inputs.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ngOnChanges</td>
+            <td>Runs every time the component's inputs have changed.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ngDoCheck</td>
+            <td>Runs every time this component is checked for changes.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ngAfterContentInit</td>
+            <td>Runs once after the component's content has been initialized.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ngAfterContentChecked</td>
+            <td>Runs every time this component content has been checked for changes.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ngAfterViewInit</td>
+            <td>Runs once after the component's view has been initialized.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ngAfterViewChecked</td>
+            <td>Runs every time the component's view has been checked for changes.</td>
+        </tr>
+        <tr>
+            <td>Rendering</td>
+            <td>afterNextRender</td>
+            <td>Runs once the next time that all components have been rendered to the DOM.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>afterRender</td>
+            <td>Runs every time all components have been rendered to the DOM.</td>
+        </tr>
+        <tr>
+            <td>Destruction</td>
+            <td>ngOnDestroy</td>
+            <td>Runs once before the component is destroyed.</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<div>
+    <input type="text" [(ngModel)]="pName">
+    <button (click)="save()">Save</button>
+</div>
+<app-product1 [productName]='pName'>
+    this sentence is content projection to Product1 component
+</app-product1>
+<hr>
+<button (click)="doNothing()">Do Nothing</button>
+<p>click on Do Nothing button will not make any thing but the ngDoCheck will be called.</p>
