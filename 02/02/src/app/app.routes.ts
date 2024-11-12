@@ -4,6 +4,7 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component';
 import { ClchOnChangesComponent } from './component-lifecycle-hook/clch-on-changes/clch-on-changes.component';
+import { DemoRxjsComponent } from './demo-rxjs/demo-rxjs/demo-rxjs.component';
 
 export const routes: Routes = [
     {
@@ -25,6 +26,10 @@ export const routes: Routes = [
     {
         path:'clch-on-changes',
         component:ClchOnChangesComponent
+    },
+    {
+        path:'demo-rxjs-component',
+        component:DemoRxjsComponent
     }
     
 ];
