@@ -1,0 +1,42 @@
+<div *appPermision="true">
+    <button>Add Class</button>
+</div>
+<table class="table table-borders">
+    <thead>
+        <th>Name</th>
+        <th>Student Count</th>
+    </thead>
+    <tbody>
+        @for(cls of classes; track $index){
+        <tr>
+            <td>{{cls.name}}</td>
+            <td [appCount]="cls.studentsCount"></td>
+        </tr>
+        }
+    </tbody>
+</table>
+<hr>
+<table class="table table-borders">
+    <thead>
+        <th>Directive Type</th>
+        <th>Purpose</th>
+        <th>Examples</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Component Directives</strong></td>
+            <td>Define reusable components with a template and logic</td>
+            <td>Any Angular component</td>
+        </tr>
+        <tr>
+            <td><strong>Structural Directives</strong></td>
+            <td>Modify the DOM layout, add/remove elements dynamically</td>
+            <td>*ngIf, *ngFor, *ngSwitch</td>
+        </tr>
+        <tr>
+            <td>,<strong> Attribute Directives</strong></td>
+            <td>Change appearance or behavior of an element</td>
+            <td>ngClass, ngStyle, custom directives like appHighlight</td>
+        </tr>
+    </tbody>
+</table>

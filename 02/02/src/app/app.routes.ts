@@ -5,6 +5,7 @@ import { NgClassComponent } from './ng-class/ng-class.component';
 import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component';
 import { ClchOnChangesComponent } from './component-lifecycle-hook/clch-on-changes/clch-on-changes.component';
 import { DemoRxjsComponent } from './demo-rxjs/demo-rxjs/demo-rxjs.component';
+import { ClassesComponent } from './demo-custom-directive/classes/classes.component';
 
 export const routes: Routes = [
     {
@@ -30,6 +31,10 @@ export const routes: Routes = [
     {
         path:'demo-rxjs-component',
         component:DemoRxjsComponent
+    },
+    {
+        path:'demo-custom-directive',
+        component:ClassesComponent
     }
     
 ];
