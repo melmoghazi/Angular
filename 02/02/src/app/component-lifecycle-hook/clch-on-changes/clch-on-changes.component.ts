@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Product1Component } from './product1/product1.component';
@@ -14,6 +15,9 @@ export class ClchOnChangesComponent implements OnInit {
   
   pName: string = 'Product 1';
   
+  constructor(private router: Router){
+
+  }
   
   ngOnInit(): void {
     console.log('%c clch-on-changes-component ngOnInit','color:red');
@@ -26,6 +30,9 @@ export class ClchOnChangesComponent implements OnInit {
     console.log('inside save');
   }
 
-  doNothing(){}
-
+  doNothing(){
+  }
+  gotoNgClass(){
+    this.router.navigateByUrl('/ngclass');
+  }
 }

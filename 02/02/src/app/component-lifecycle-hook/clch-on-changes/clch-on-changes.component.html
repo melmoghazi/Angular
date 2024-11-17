@@ -1,3 +1,6 @@
+<p>
+    <strong>Component lifecycle hook is applyed in the Component and also in the custom directive.</strong>
+</p>
 <h1>OnChanges lifecycle hook</h1>
 <p>One of the key features of Angular is its use of lifecycle hooks, which allow developers to tap into different stages
     of a component’s lifecycle
@@ -25,21 +28,36 @@
 
 <h1>ngDoCheck</h1>
 <p>call 2 times
-    1- one time after ngOnInit.
-    2- every time after ngOnChanges called.
+    1- Runs once after ngOnInit.
+    2- Runs every time after ngOnChanges.
 </p>
 
 <hr>
 <h1>ngAfterContentInit</h1>
-<p>called one time only one time not every time after the first ngDoCheck</p>
+<p>Runs one time only one time not every time after the first ngDoCheck</p>
 
 <hr>
 <h1>ngAfterContentChecked</h1>
 <p>
-    1 - called one after ngAfterContentInit
-    2- called every time after ngDoCheck
+    1- Runs once after ngAfterContentInit
+    2- Runs every time after ngDoCheck
 </p>
-
+<hr>
+<h1>ngAfterViewInit</h1>
+<p>
+    Render once after ngAfterContentChecked, means after componet and its child componets rendered.
+</p>
+<hr>
+<h1>ngAfterViewChecked</h1>
+<p>
+    - Runs once after ngAfterViewInit
+    - Runs every time after ngAfterContentChecked
+</p>
+<h1>ngOnDestroy</h1>
+<p>
+    -
+</p>
+================================================================================================
 <hr>
 <h1>Component lifecycle hook</h1>
 <table class="table table-border">
@@ -121,3 +139,5 @@
 <hr>
 <button (click)="doNothing()">Do Nothing</button>
 <p>click on Do Nothing button will not make any thing but the ngDoCheck will be called.</p>
+<button (click)="gotoNgClass()">Go To Ng Class</button>
+<p>click on Go To Ng Class button and see console log ngOnDestroy</p>
