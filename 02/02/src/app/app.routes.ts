@@ -6,35 +6,61 @@ import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component
 import { ClchOnChangesComponent } from './component-lifecycle-hook/clch-on-changes/clch-on-changes.component';
 import { DemoRxjsComponent } from './demo-rxjs/demo-rxjs/demo-rxjs.component';
 import { ClassesComponent } from './demo-custom-directive/classes/classes.component';
+import { AngularRoutingHomeComponent } from './angular-routing/home/angular-routing-home.component';
+import { ProductListComponent } from './angular-routing/product-list/product-list.component';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
     {
-        path:'ngfor',
-        component:NgForComponent
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home'
     },
     {
-        path:'ngif',
-        component:NgIfComponent
+        path: 'home',
+        component: HomeComponent
     },
     {
-        path:'ngclass',
-        component:NgClassComponent
+        path: 'ngfor',
+        component: NgForComponent
     },
     {
-        path:'built-in-pipes',
-        component:BuiltInPipesComponent
+        path: 'ngif',
+        component: NgIfComponent
     },
     {
-        path:'clch-on-changes',
-        component:ClchOnChangesComponent
+        path: 'ngclass',
+        component: NgClassComponent
     },
     {
-        path:'demo-rxjs-component',
-        component:DemoRxjsComponent
+        path: 'built-in-pipes',
+        component: BuiltInPipesComponent
     },
     {
-        path:'demo-custom-directive',
-        component:ClassesComponent
+        path: 'clch-on-changes',
+        component: ClchOnChangesComponent
+    },
+    {
+        path: 'demo-rxjs-component',
+        component: DemoRxjsComponent
+    },
+    {
+        path: 'demo-custom-directive',
+        component: ClassesComponent
+    },
+    {
+        path: 'angular-routing-home',
+        component: AngularRoutingHomeComponent
+    },
+    {
+        path: 'angular-routing-products-list',
+        component: ProductListComponent
+    },
+    {
+        path:'**',
+        component:PageNotFoundComponent
     }
-    
+
 ];
