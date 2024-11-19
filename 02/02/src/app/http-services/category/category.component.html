@@ -1,0 +1,14 @@
+<table class="table table-borders">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        @for (cat of categoriesList; track cat.id) {
+        <tr>
+            <td>{{cat.id}}</td>
+            <td>{{cat.name}}</td>
+        </tr>
+        }
+    </tbody>
+</table>

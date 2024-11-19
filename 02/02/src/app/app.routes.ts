@@ -17,6 +17,8 @@ import { ARAccountComponent } from './angular-routing/araccount/araccount.compon
 import { ArLoginComponent } from './angular-routing/araccount/ar-login/ar-login.component';
 import { ArRegisterComponent } from './angular-routing/araccount/ar-register/ar-register.component';
 import { DiListComponent } from './di/di-list/di-list.component';
+import { CategoryComponent } from './http-services/category/category.component';
+import { ProductsListComponent } from './http-services/products/products-list/products-list.component';
 
 export const routes: Routes = [
     {
@@ -85,16 +87,21 @@ export const routes: Routes = [
                 component: ArRegisterComponent
             }
         ]
-
-
     },
     {
         path: 'di-list',
         component: DiListComponent
     },
     {
+        path: 'categories-list',
+        component: CategoryComponent
+    },
+    {
+        path: 'products-list',
+        component: ProductsListComponent
+    },
+    {
         path: '**',
         component: PageNotFoundComponent
     }
-
 ];

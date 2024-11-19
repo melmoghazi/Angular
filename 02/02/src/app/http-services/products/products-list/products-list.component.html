@@ -1,0 +1,22 @@
+<p>use Singletone service that call http</p>
+<p>use Handle Error Service</p>
+<p>use Interceptor</p>
+
+<table class="table table-borders">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Descripton</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        @for (prod of productsList; track prod.id) {
+        <tr>
+            <td>{{prod.id}}</td>
+            <td>{{prod.name}}</td>
+            <td>{{prod.description}}</td>
+            <td>{{prod.price}}</td>
+        </tr>
+        }
+    </tbody>
+</table>
