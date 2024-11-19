@@ -1,2 +1,30 @@
-<p>product-list works!</p>
-<a routerLink="/angular-routing-home">Home</a>
+<a routerLink="/angular-routing-home">Product Home</a> |
+<a routerLink="/araccount">Account</a>
+
+<br>
+<br>
+
+<table class="table table-borders">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (prod of productsList; track prod.id) {
+        <tr>
+            <td>{{prod.id}}</td>
+            <td>
+                <a [routerLink]="['/ar-product-details',prod.id]"> {{prod.name}}</a>
+            </td>
+            <td>{{prod.description}}</td>
+            <td>{{prod.price}}</td>
+            <td><button (click)="editProduct(prod.id)">Edit</button></td>
+        </tr>
+        }
+    </tbody>
+</table>

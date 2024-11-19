@@ -11,6 +11,11 @@ import { ProductListComponent } from './angular-routing/product-list/product-lis
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ARProductDetailsComponent } from './angular-routing/product-list/arproduct-details/arproduct-details.component';
+import { AREditProductComponent } from './angular-routing/product-list/aredit-product/aredit-product.component';
+import { ARAccountComponent } from './angular-routing/araccount/araccount.component';
+import { ArLoginComponent } from './angular-routing/araccount/ar-login/ar-login.component';
+import { ArRegisterComponent } from './angular-routing/araccount/ar-register/ar-register.component';
 
 export const routes: Routes = [
     {
@@ -59,8 +64,32 @@ export const routes: Routes = [
         component: ProductListComponent
     },
     {
-        path:'**',
-        component:PageNotFoundComponent
+        path: 'ar-product-details/:id',
+        component: ARProductDetailsComponent
+    },
+    {
+        path: 'ar-edit-product',
+        component: AREditProductComponent
+    },
+    {
+        path: 'araccount',
+        component: ARAccountComponent,
+        children: [
+            {
+                path: 'arlogin',
+                component: ArLoginComponent
+            },
+            {
+                path:'arregister',
+                component:ArRegisterComponent
+            }
+        ]
+
+
+    },
+    {
+        path: '**',
+        component: PageNotFoundComponent
     }
 
 ];
