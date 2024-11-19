@@ -16,6 +16,7 @@ import { AREditProductComponent } from './angular-routing/product-list/aredit-pr
 import { ARAccountComponent } from './angular-routing/araccount/araccount.component';
 import { ArLoginComponent } from './angular-routing/araccount/ar-login/ar-login.component';
 import { ArRegisterComponent } from './angular-routing/araccount/ar-register/ar-register.component';
+import { DiListComponent } from './di/di-list/di-list.component';
 
 export const routes: Routes = [
     {
@@ -80,12 +81,16 @@ export const routes: Routes = [
                 component: ArLoginComponent
             },
             {
-                path:'arregister',
-                component:ArRegisterComponent
+                path: 'arregister',
+                component: ArRegisterComponent
             }
         ]
 
 
+    },
+    {
+        path: 'di-list',
+        component: DiListComponent
     },
     {
         path: '**',

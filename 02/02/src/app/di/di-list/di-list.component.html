@@ -1,0 +1,19 @@
+<p>di-list works!</p>
+@if (list) {
+<table class="table table-borders">
+    <thead>
+        <td>Id</td>
+        <td>Name</td>
+    </thead>
+    <tbody>
+        @for (size of list; track size.id) {
+        <tr>
+            <td>{{size.id}}</td>
+            <td>{{size.name}}</td>
+        </tr>
+        }
+    </tbody>
+</table>
+}@else {
+<p>No Content Found.</p>
+}
