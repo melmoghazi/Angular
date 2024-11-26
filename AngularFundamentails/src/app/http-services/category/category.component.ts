@@ -1,5 +1,5 @@
-import { CategoryService } from './../category.service';
-import { Category } from './../category.model';
+import { CategoryService } from '../category.service';
+import { Category } from '../category.model';
 import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({

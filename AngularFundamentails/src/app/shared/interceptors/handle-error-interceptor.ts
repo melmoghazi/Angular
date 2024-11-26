@@ -1,4 +1,4 @@
-import { HandleErrorService } from './../services/handle-error.service';
+import { HandleErrorService } from '../services/handle-error.service';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { catchError, Observable } from "rxjs";
