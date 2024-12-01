@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "02": {
+    "AngularFundamentails": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/02",
+            "outputPath": "dist/AngularFundamentails",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "02:build:production"
+              "buildTarget": "AngularFundamentails:build:production"
             },
             "development": {
-              "buildTarget": "02:build:development"
+              "buildTarget": "AngularFundamentails:build:development"
             }
           },
           "defaultConfiguration": "development"

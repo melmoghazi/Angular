@@ -1,1 +1,9 @@
-<p>the-parent works!</p>
+<p>Parent Name: {{parnetName}}</p>
+@if (childFullName) {
+<p>Child Full Name: {{childFullName}}</p>
+}
+@if (childPersonName) {
+    <p>Child Person Name: {{childPersonName}}</p>
+    }
+<app-the-child></app-the-child>
+<button type="button" (click)="buttonClick()">Get Child Full Name</button>
