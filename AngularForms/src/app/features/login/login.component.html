@@ -1,0 +1,115 @@
+<p>Template reference variable from FormsModule #loginForm="ngForm"</p>
+<hr>
+<div class="container">
+    <form #loginForm="ngForm">
+        <h1>loginForm</h1>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" ngModel name="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" ngModel name="pwd">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="login(loginForm)">Login</button>
+    </form>
+    <hr>
+    <form #loginForm2="ngForm">
+        <h1>loginForm2</h1>
+        <p>reference one field #email2="ngModel"</p>
+        <div class="py-2">
+            from value= {{loginForm2.value | json}}
+            <br>email value= {{email2.value}}
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" ngModel name="email2" #email2="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" ngModel name="pwd2">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="login2(loginForm2)">Login</button>
+    </form>
+    <hr>
+    <form #loginForm3="ngForm">
+        <h1>loginForm3</h1>
+        <p>ngModel 2 way data binding in variables in ts</p>
+        <div class="py-2">
+            from value= {{loginForm3.value | json}}
+            <br>email variable value= {{email3}}
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" [(ngModel)]="email3" name="email3">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="pwd3" name="pwd3">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <hr>
+    <form #loginForm4="ngForm">
+        <h1>loginForm4</h1>
+        <p>ngModel 2 way data binding in object in ts</p>
+        <div class="py-2">
+            from value= {{loginForm4.value | json}}
+            <br> object value={{loginDto | json}}
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" [(ngModel)]="loginDto.email4" name="email4">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="loginDto.pwd4" name="pwd4">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <hr>
+    <form #loginForm5="ngForm">
+        <h1>loginForm5</h1>
+        <p>Angular Template-driven Form - Show and hide validation error messages</p>
+        <div class="py-2">
+            object value={{loginDto5 | json}}
+            <br> errors= {{email5.errors | json}}
+        </div>
+        <!-- @if(email5.invalid && email5.dirty){ -->
+        @if(email5.errors?.['required'] && email5.touched){
+        <div class="alert alert-danger">
+            <p>email is required</p>
+        </div>
+        }
+        @if(email5.errors?.['minlength'] && email5.touched && !email5.errors?.['required']){
+        <div class="alert alert-danger">
+            <p>Email must be more than {{email5.errors?.['minlength'].requiredLength}} characters
+                but you inserted only {{email5.errors?.['minlength'].actualLength}} characters.
+            </p>
+        </div>
+        }
+        @if(email5.errors?.['email'] && !email5.errors?.['minlength'] && email5.touched && !email5.errors?.['required']){
+        <div class="alert alert-danger">
+            <p>email is not vlaid</p>
+        </div>
+        }
+        @if(email5.errors?.['pattern'] ){
+        <div class="alert alert-danger">
+            <p>email must have .com</p>
+        </div>
+        }
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" [(ngModel)]="loginDto5.email5" name="email5" #email5="ngModel"
+                required minlength="5" maxlength="15" email pattern=".*@.*\.com$">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="loginDto5.pwd5" name="pwd5" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
