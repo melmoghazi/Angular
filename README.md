@@ -37,3 +37,16 @@ Angular Forms - Understanding ngModel One Way and Bidirectional Data Binding
 tsconfig.json "noUnusedLocals": true // means anything not used must be removed.
 tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //means property initialization not required.
 # End Angular Forms
+
+# Routing Guard
+## Routing CanActivate Guard - Preventing unauthorized access
+## Routing Guard - CanActivateFn vs CanActivate (Deprecated)
+## Routing and Angular Performance - Lazy Load Standalone Components
+- routing loadComponet make lazy load of the component, means the component will load only when its link be active.
+## Best Practices for Building Scalable Angular Applications - Use a Modular A
+## Routing Guard - CanLoadFn & CanLoad (Deprecated) vs CanMatchFn
+- CanLoadFn, CanLoad, and CanMatchFn are equal to CanActivateFn that secure your route.
+## Routing Guard - The differences CanActivateFn vs CanMatchFn
+- CanActivateFn load the componet or the moduel js file however it can be unaccess by the user, so it is not useful with lazy load.
+- Use CanMatchFn instead of CanActivateFn when using lazy loading.
+# End Routing Guard
