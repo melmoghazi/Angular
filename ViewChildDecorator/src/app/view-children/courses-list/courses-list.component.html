@@ -1,0 +1,28 @@
+<br><br>
+<div>
+    <input type="text" placeholder="Search" [(ngModel)]="seachText" (ngModelChange)="updateSeachText($event)">
+</div>
+<!-- <table class="table table-borders">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        @for (item of displayedCourses; track $index) {
+        <app-course-details [course]="item"> </app-course-details>
+        <br>
+        }
+    </tbody>
+</table> -->
+
+<div class="container-fluid">
+    <div class="row">
+        @for (item of displayedCourses; track $index) {
+        <div class="col-md-3 col-12">
+            <app-course-details [course]="item"> </app-course-details>
+        </div>
+        }@empty {
+           <h4>No content found</h4> 
+        }
+    </div>
+</div>
