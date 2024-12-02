@@ -1,4 +1,3 @@
-import { Person } from './../the-child/the-child.component';
 import { AfterViewInit, Component, ElementRef, ViewChild, viewChild, ViewChildren, OnChanges } from '@angular/core';
 import { TheChildComponent } from '../the-child/the-child.component';
 

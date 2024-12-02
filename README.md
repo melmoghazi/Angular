@@ -60,3 +60,10 @@ tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //mea
 - @ViewChild Decorator (Metadata Properties and Scope)
 - Understating @ViewChildren Decorator
 - Understating @ContentChild Decorator
+    - apply on the first match child only.
+    - access only first child.
+- Understating @ContentChildren Decorator
+    - access nested children.
+## Notes:
+- View Child or View Children your code is in the parent and you need to view what in the child.
+- Content Child or Content children your code is in the child and you need to get the content sent from the parent. 

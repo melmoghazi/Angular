@@ -1,0 +1,15 @@
+<app-child-content-children>
+    <course-name name="course 1"></course-name>
+    <course-name name="course 2"></course-name>
+    <course-name name="course 3"></course-name>
+    <!-- nested -->
+    @if (showNested) {
+    <app-child-content-children>
+        <course-name name="course 4"></course-name>
+        <course-name name="course 5"></course-name>
+    </app-child-content-children>
+    }
+
+</app-child-content-children>
+
+<button type="button" (click)="toggleShowNested()">Show Nested</button>
