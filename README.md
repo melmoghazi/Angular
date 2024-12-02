@@ -50,3 +50,8 @@ tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //mea
 - CanActivateFn load the componet or the moduel js file however it can be unaccess by the user, so it is not useful with lazy load.
 - Use CanMatchFn instead of CanActivateFn when using lazy loading.
 # End Routing Guard
+# Angular Resolver
+-In Angular, a Resolver is a service that resolves data before a route is activated. It ensures that the necessary data for a route is retrieved and available before the route component is loaded, enhancing the user experience by avoiding partially loaded views.
+- Pre-Fetching Data: A resolver pre-fetches data from a service or an API before navigating to a route.
+- Synchronous or Asynchronous: It can handle both synchronous and asynchronous data fetching (e.g., API calls using `HttpClient`).
+- Route Guard-Like Behavior: While not technically a guard, a resolver works similarly by preventing the route from loading until the data is resolved.

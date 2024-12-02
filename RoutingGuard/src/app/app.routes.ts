@@ -12,6 +12,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AuthCanLoadGuard } from './shared/guards/auth-can-load.guard';
 import { AuthCanLoadfnGuard } from './shared/guards/auth-can-load-fn.guard';
 import { authCanMatchGuard } from './shared/guards/auth-can-match.guard';
+import { CourseComponent } from './components/course/course.component';
+import { CourseDepResolver } from './resolvers/course-dep-resolver';
+import { courseResolver } from './resolvers/course.resolver';
 
 export const routes: Routes = [
     {
@@ -40,5 +43,12 @@ export const routes: Routes = [
         //canLoad:[AuthCanLoadGuard],
         //canLoad: [AuthCanLoadfnGuard]
         canMatch:[authCanMatchGuard]
+    },
+    {
+        path:'course/:id',
+        component:CourseComponent,
+        //resolve:{courseData:CourseDepResolver}
+        resolve:{courseData:courseResolver}
+
     }
 ];
