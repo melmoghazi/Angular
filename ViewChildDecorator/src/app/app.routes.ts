@@ -8,6 +8,8 @@ import { CoursesListComponent } from './view-children/courses-list/courses-list.
 import { ParentContentChildComponent } from './content-child/parent-content-child/parent-content-child.component';
 import { TheParentComponent } from './view-child/the-parent/the-parent.component';
 import { ParentContentChildrenComponent } from './content-children/parent-content-children/parent-content-children.component';
+import { ParentSingleSlotComponent } from './single-slot-conten-projection/parent-single-slot/parent-single-slot.component';
+import { ParentMultiSlotComponent } from './multi-slot-conten-projection/parent-multi-slot/parent-multi-slot.component';
 
 export const routes: Routes = [
     {
@@ -41,6 +43,14 @@ export const routes: Routes = [
     {
         path: 'content-children-example',
         component: ParentContentChildrenComponent
+    },
+    {
+        path: 'content-projection-single-slot',
+        component: ParentSingleSlotComponent
+    },
+    {
+        path: 'content-projection-multi-slot',
+        component: ParentMultiSlotComponent
     }
 
 

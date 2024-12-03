@@ -58,12 +58,26 @@ tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //mea
 
 # Angular Decorator (Metadata Properties and Scope)
 - @ViewChild Decorator (Metadata Properties and Scope)
+    - Metadata:
+        - static = false/true false is the default and it means run after change detection and run with every change.
+        - read you can set specific type.
+    - Scope: can not see nested children.
+    - track the first match child only.
 - Understating @ViewChildren Decorator
 - Understating @ContentChild Decorator
-    - apply on the first match child only.
+    - trak the first match child only.
     - access only first child.
 - Understating @ContentChildren Decorator
     - access nested children.
 ## Notes:
 - View Child or View Children your code is in the parent and you need to view what in the child.
 - Content Child or Content children your code is in the child and you need to get the content sent from the parent. 
+
+# Angular Content projection
+- Content Projection is away to send data (html elements have content) from component to its child.
+- Content projection 3 types:
+    - Single-slot:
+        - Accept resources from one place. use ng-content in the html of the child. use @ContentChild in the ts of the child.
+    - Multi-slot:
+        - Send data from multi places and render it in multi places.
+    - Condition
