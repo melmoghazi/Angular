@@ -1,0 +1,13 @@
+<div *ngIf="show">{{title}}</div>
+
+<br>
+<button (click)="toggole()">toggole title</button>
+<p>use ng-container before Angular 17-------------------------</p>
+<ng-container *ngIf="show">
+    {{title}}
+</ng-container>
+<br>
+<p>use ng-container after Angular 17-------------------------</p>
+@if (show) {
+    {{title}}
+}

@@ -81,3 +81,5 @@ tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //mea
     - Multi-slot:
         - Send data from multi places and render it in multi places.
     - Condition
+# Angular Advanced Core Features
+- ng-container
