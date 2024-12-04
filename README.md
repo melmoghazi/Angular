@@ -83,3 +83,17 @@ tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //mea
     - Condition
 # Angular Advanced Core Features
 - ng-container
+- ng-template
+- NgTemplateOutlet Directive
+    - display ng-template in container
+    - dynamically render ng-template
+    - use a reusable component
+    - optimze performance
+    - readable and clean code
+- Declarative vs Imperative Programming Paradigms in Angular
+    - Declarative: focus on the end result and not give attention to steps.
+    - Imperative: focus on the steps and not give attention to end result.
+- Creating Configurable Components with ng-template in Angular
+- Understanding ngTemplateOutletContext
+    - used with ngTemplateOutlet
+- ngTemplateOutletInjector

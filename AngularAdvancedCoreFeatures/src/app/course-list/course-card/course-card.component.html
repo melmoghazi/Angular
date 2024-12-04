@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">
+        <h1 class="fw-bold mb-0">Card Header</h1>
+    </div>
+    <div class="card-body">
+        <ng-container [ngTemplateOutlet]="cardBodyTemp() || cardbody"></ng-container>
+        <ng-container [ngTemplateOutlet]="nameTemp"
+            [ngTemplateOutletContext]="{objName:'Angular 16 Course'}"></ng-container>
+    </div>
+    <div class="card-footer">
+        <div>this is a footer</div>
+        <!-- <ng-container [ngTemplateOutlet]="nameTemp" [ngTemplateOutletContext]="{objName:'Course of Angular 18' , title:'octacourse' }"></ng-container> -->
+        <ng-container
+            *ngTemplateOutlet="nameTemp; context:{objName:'Course of Angular 18' , title:'octacourse' }"></ng-container>
+
+        <ng-container [ngTemplateOutlet]="lessonTemp"
+            [ngTemplateOutletContext]="{$imlicit:course, isValid:true}"></ng-container>
+    </div>
+</div>
+
+<ng-template #cardbody>
+    <div class="card-text">This is a card component</div>
+</ng-template>
+
+<ng-template #nameTemp let-courseName="objName" let-title="title">
+    <div class="fw-bold">
+        {{courseName}} - {{title}}
+    </div>
+</ng-template>
+
+<ng-template #lessonTemp let="course" let-isValid="isValid">
+    <div class="fw-bold">
+        {{course | json}}
+        {{course.title}} - {{course.lessons}} - {{isValid}}
+    </div>
+</ng-template>

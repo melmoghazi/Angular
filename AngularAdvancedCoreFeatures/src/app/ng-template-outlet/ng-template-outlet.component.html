@@ -1,0 +1,16 @@
+<ng-template #templateRef>
+    <p>ng template outlet</p>
+</ng-template>
+
+
+<!-- <ng-container #containerRef>
+    <div>I am a div in ng container</div>
+</ng-container> -->
+<p>Exmaple to render ng-template is to use [ngTemplateOutlet]="templateRef" attribute directive</p>
+<ng-container [ngTemplateOutlet]="templateRef">
+    <div>I am a div in ng container</div>
+</ng-container>
+<p>-------------------------------------------------------</p>
+<ng-container *ngTemplateOutlet="templateRef">
+    <div>I am a div in ng container</div>
+</ng-container>

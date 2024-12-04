@@ -1,0 +1,28 @@
+<p>ngtemplate does not rendered in DOM</p>
+<p>must use <b> template reference variable</b> to show or hide ng-template</p>
+
+<p>------------------------------------------------------------------</p>
+<p>Example of using ng-template with structure directive ngIf else</p>
+<div *ngIf="show; else templateRef">
+    <p>I am in if condition</p>
+</div>
+
+<ng-template #templateRef>
+    <div>
+        <p>I am a p in a ng template</p>
+    </div>
+</ng-template>
+<p>------------------------------------------------------------------</p>
+<p>Example load ng-template into ng-container dynamically when button click.<br>
+Use template reference variable to ref ng-template and reference variable or container reference variable to ref ng-container.</p>
+<button class="btn btn-primary" (click)="loadTemplate()">Load Template</button>
+
+<ng-template #nameTemplateRef>
+    <p>I am tempalte with name</p>
+</ng-template>
+
+
+<ng-container #containerDivRef>
+    <div>I am a div in ng container</div>
+</ng-container>
+<p>------------------------------------------------------------------</p>

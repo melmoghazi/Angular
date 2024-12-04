@@ -1,0 +1,14 @@
+<div><strong>111-Creating Configurable Components with ng-template in Angular</strong></div>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <app-course-card [cardBodyTemp]="parentBodyTemp"></app-course-card>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #parentBodyTemp>
+<div class="card-text">the content from parent component</div>
+</ng-template>
