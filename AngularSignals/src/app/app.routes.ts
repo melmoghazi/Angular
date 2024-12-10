@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductsComputedSignalComponent } from './products-computed-signal/products-computed-signal.component';
 
 export const routes: Routes = [
     {
@@ -15,5 +16,9 @@ export const routes: Routes = [
     {
         path: 'products',
         component: ProductListComponent
+    },
+    {
+        path: 'products-computed-signal',
+        component: ProductsComputedSignalComponent
     }
 ];

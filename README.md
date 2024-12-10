@@ -104,3 +104,6 @@ tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //mea
     - signal depends on another signal
     - you can not set in it, but it detect the changes from the signal it depens on.
 - Angular Signals - Readonly Signal
+    - immutable data so you can not change it.
+    - does not depend on another signal
+    - 
