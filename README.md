@@ -106,4 +106,6 @@ tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //mea
 - Angular Signals - Readonly Signal
     - immutable data so you can not change it.
     - does not depend on another signal
-    - 
+- Differences between model() and input()
+    - model is writable signal so you can use set but input signal is read only so set is not exist.
+    - model can used with 2 way data binding, but input signal is 1 way input binding only.

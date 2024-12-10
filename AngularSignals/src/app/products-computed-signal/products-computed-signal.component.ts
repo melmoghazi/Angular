@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, OnInit, signal } from '@angular/core';
 
 import { ProductService } from './../product.service';
 import { Product } from '../product';
@@ -15,10 +15,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProductsComputedSignalComponent implements OnInit {
 
-  constructor(private productService: ProductService) { }
-
   searchTextSignal = signal<string>('');
   private productsSignal = signal<Array<Product>>([]);
+  //computed signal
   productsComputed = computed(
     () => {
       if (this.searchTextSignal()) {
@@ -30,11 +29,22 @@ export class ProductsComputedSignalComponent implements OnInit {
       }
     }
   );
-
   //readonly signal
-  displayedColumns=signal<string[]>([
-    'Id','Name','Description','Price'
+  displayedColumns = signal<string[]>([
+    'Id', 'Name', 'Description', 'Price'
   ]).asReadonly();
+
+  //constructor
+  constructor(private productService: ProductService) {
+    //run on every change
+    effect(
+      () => {
+        this.productsSignal.set([]);
+        console.log('displayproductscount=', this.productsComputed.length);
+      },
+      { allowSignalWrites: true }
+    );
+  }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(
