@@ -1,0 +1,28 @@
+<table class="table table-borders">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+    </thead>
+    @for (item of products; track $index) {
+    <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+    </tr>
+    }
+</table>
+
+<button (click)="onClick()">Click</button>
+<hr>
+<h1>Courses signal</h1>
+<table class="table table-borders">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+    </thead>
+    @for (item of productsSignal(); track $index) {
+    <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+    </tr>
+    }
+</table>

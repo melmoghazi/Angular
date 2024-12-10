@@ -97,3 +97,10 @@ tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //mea
 - Understanding ngTemplateOutletContext
     - used with ngTemplateOutlet
 - ngTemplateOutletInjector
+
+# Angular Signals - What are signals
+- Angular Signals - Writable signals
+- Angular Signals - Computed signals:
+    - signal depends on another signal
+    - you can not set in it, but it detect the changes from the signal it depens on.
+- Angular Signals - Readonly Signal
