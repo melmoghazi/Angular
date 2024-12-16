@@ -109,3 +109,21 @@ tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //mea
 - Differences between model() and input()
     - model is writable signal so you can use set but input signal is read only so set is not exist.
     - model can used with 2 way data binding, but input signal is 1 way input binding only.
+# Angular Dependency Injection in depth
+    - Resolution modifiers:
+        - @Optional - Parameter Decorator, if not injected make it null
+        - @Self - Parameter Decorator, not use the DI hierarical but use only current component.
+        - @SkipSelf - Parameter Decorator, use the DI hierarical but do not use the current component.
+            it is the opposite of @Self so you can compine (@Self and @Optional) (@SkipSelf and @Optional) but
+            can not compine (@Self and @SkipSelf).
+        - @Host - Parameter Decorator, can not compine (@Self and @SkipSelf).
+    - Configuring dependency providers 
+        - Class providers useClass. Inject class
+        - Alias providers useExisting. use existing Injected class
+        - Value providers useValue. Inject static object.
+        - Angular InjectionToken. Inject Interface, object, or array to DI.
+        - Factory providers useFactory. Can switch between instaces in the runtime depending of specific condition.
+    - Angular Injection Context: It available in specific palces in the (component, directive, guard, pipe):
+        - constructor
+        - Inject into field
+        - dependency providers(factor function)
