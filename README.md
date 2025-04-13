@@ -127,3 +127,5 @@ tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //mea
         - constructor
         - Inject into field
         - dependency providers(factor function)
+# Understanding View Encapsoulation
+    - Introduction to View Encapsulation
